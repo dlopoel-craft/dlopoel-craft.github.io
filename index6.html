@@ -5,26 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Тестирование пуш-уведомлений в рамках обучения</title>
     <script src="https://pxl.demo.altcraft.com/ak_container.js?id=Mzk1fDI=" ></script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Визитка</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            width: 90%;
+            max-width: 600px;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #7f8c8d;
+            margin-bottom: 30px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        .btn {
+            padding: 12px 25px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .btn-secondary {
+            background-color: #2ecc71;
+        }
+        .btn-secondary:hover {
+            background-color: #27ae60;
+        }
+    </style>
 </head>
 <body>
-
+   
     <button id="init_sub">Подписаться на уведомления</button>
 
-<script>
-	document.getElementById('init_sub').addEventListener('click', function() { // По клику на кнопку..
-	try {
-		var akPush = new AKPush();
-		akPush.initSubscription() // Покажет форму для подписки
-		}
-	catch (e) {
+    <script>
+	    document.getElementById('init_sub').addEventListener('click', function() { // По клику на кнопку..
+	        try {
+		    var akPush = new AKPush();
+		        akPush.initSubscription() // Покажет форму для подписки
+		    }
+	    catch (e) {
 		console.log(e); // В случае ошибки выведет сообщение в консоль
 		}
 	});
-</script>
-<script src=https://pxl.demo.altcraft.com/form/js/embed_v1.js></script>
-<a href="https://dlopoel-craft.github.io/index1.html" class="button">Страница 1</a>
-<a href="https://dlopoel-craft.github.io/index2.html" class="button">Страница 2</a>
-    <p>Тестирование пуш-уведомлений в рамках обучения</p>
-<iframe src="https://pxl.demo.altcraft.com/form?form=8NJf1mCeuRv75dBenr42Gi6TzCPLYgkTjqv1oYxqXtbM6E4M53kBMS1r88TY2m7opMDDKRQoSA67i2g1tEgNHpoV&iframe=1" frameborder="0" name="ak-form-8NJf1mCeuRv75dBenr42Gi6TzCPLYgkTjqv1oYxqXtbM6E4M53kBMS1r88TY2m7opMDDKRQoSA67i2g1tEgNHpoV" class="ak-form" width="100%" sandbox="allow-same-origin allow-forms allow-scripts allow-popups allow-popups-to-escape-sandbox allow-top-navigation"></iframe>
+        <iframe src="https://pxl.demo.altcraft.com/form?form=8NJf1mCeuRv75dBenr42Gi6TzCPLYgkTjqv1oYxqXtbM6E4M53kBMS1r88TY2m7opMDDKRQoSA67i2g1tEgNHpoV&iframe=1" frameborder="0" name="ak-form-8NJf1mCeuRv75dBenr42Gi6TzCPLYgkTjqv1oYxqXtbM6E4M53kBMS1r88TY2m7opMDDKRQoSA67i2g1tEgNHpoV" class="ak-form" width="100%" sandbox="allow-same-origin allow-forms allow-scripts allow-popups allow-popups-to-escape-sandbox allow-top-navigation"></iframe>
+    <div class="container">
+        <h1>Добро пожаловать</h1>
+        <p>Приветствую вас на главной странице моего сайта, ниже представлены еще 2 страницы к просмотру</p>      
+        <div class="buttons">
+            <a href="https://dlopoel-craft.github.io/index1.html" class="btn">Первая страницае</a>
+            <a href="https://dlopoel-craft.github.io/index2.html" class="btn">Вторая страница</a>
+        </div>
+    </div>
 </body>
 </html>
