@@ -4,6 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Визитка</title>
+	(function (window, document, dataLayerName, containerID) {
+        window[dataLayerName] = window[dataLayerName] || [];
+        window[dataLayerName].push({ 'start': new Date().getTime(), event: 'actm-js' });
+        var firstScript = document.getElementsByTagName('script')[0];
+        var script = document.createElement('script');
+        var dl = dataLayerName !== 'acDataLayer' ? '&l=' + dataLayerName : '';
+        script.async = true;
+        script.src = 'https://pxl.demo.altcraft.com/actm/js/actm.js?id=' + containerID + dl;
+        script.type = 'module';
+        if (firstScript && firstScript.parentNode) {
+            firstScript.parentNode.insertBefore(script, firstScript);
+    }
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -84,6 +96,7 @@
         <div class="buttons">
             <a href="https://dlopoel-craft.github.io/index1.html" class="btn">Первая страницае</a>
             <a href="https://dlopoel-craft.github.io/index2.html" class="btn">Вторая страница</a>
+			<a class="btn">Пустая кнопка для тестов</a>
         </div>
     </div>
 </body>
